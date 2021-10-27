@@ -17,7 +17,8 @@
   color: #61dafb;
 }
 
+/* sth we need to do */
 .leaflet-container {
-  width: 100vw;
-  height: 100vh;
+  width: 70vw;
+  height: 70vh;
 }
