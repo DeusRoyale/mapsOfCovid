@@ -22,3 +22,12 @@
   width: 70vw;
   height: 70vh;
 }
+
+.mrkr{
+  stroke: red !important; 
+  stroke-width: 2px !important;
+  
+}
+
+
+
