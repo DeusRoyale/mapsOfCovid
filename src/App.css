@@ -17,11 +17,7 @@
   color: #61dafb;
 }
 
-/* sth we need to do */
-.leaflet-container {
-  width: 70vw;
-  height: 70vh;
-}
+
 
 .mrkr{
   stroke: red !important; 
