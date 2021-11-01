@@ -1,6 +1,6 @@
 import React from "react"
 import "leaflet/dist/leaflet.css"
-import { MapContainer, TileLayer, GeoJSON, Popup, Marker } from "react-leaflet"
+import { MapContainer, GeoJSON, /* Popup, Marker, TileLayer, */ } from "react-leaflet"
 import './Covid.css'
 
 const CovidMap = ({ countries }) => {

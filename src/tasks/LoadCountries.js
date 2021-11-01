@@ -35,7 +35,7 @@ class LoadCoutriesTask {
       z.properties.confirmedText = '0'
 
       if(covidCountry != null){
-        let confirmed = Number(covidCountry.Confirmed)
+        let confirmed = Number(covidCountry.Confirmed).toLocaleString("en-US")
         z.properties.confirmed = confirmed
         z.properties.confirmedText = confirmed
       }

@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Legend = () => {
+const Legend = ({legendItems}) => {
+  console.log(legendItems)
+  
   return (
     <div>
       Legend

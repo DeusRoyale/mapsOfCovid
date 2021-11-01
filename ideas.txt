@@ -1,2 +1,3 @@
 *** a searchBar above the map; pass in the redux funtionality to pass input to 
 'filter' of App.
+SetInterval for atuoRefresh
