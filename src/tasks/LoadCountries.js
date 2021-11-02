@@ -1,5 +1,6 @@
 import { features } from "../data/countries.json"
 import papa from "papaparse"
+import legendItems from "../entities/LegendItems"
 
 class LoadCoutriesTask {
   covid19DataURL =
@@ -35,19 +36,29 @@ class LoadCoutriesTask {
       z.properties.confirmedText = '0'
 
       if(covidCountry != null){
-        let confirmed = Number(covidCountry.Confirmed).toLocaleString("en-US")
+        let confirmed = Number(covidCountry.Confirmed)
         z.properties.confirmed = confirmed
-        z.properties.confirmedText = confirmed
+        z.properties.confirmedText = confirmed.toLocaleString("en-US")
       }
 
-      
+      this.#setCountryColor(z)
+      //console.log(z)      
     }
     
     
     )
     this.setState(features)
   }
+  
+  #setCountryColor = (country) => {
+    const legendItem = legendItems.find((item) =>
+      item.isFor(country.properties.confirmed)
+    );
+
+    if (legendItem != null) country.properties.color = legendItem.color;
+  };
 }
+
 
 export default LoadCoutriesTask
 

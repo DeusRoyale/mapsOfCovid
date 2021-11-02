@@ -1,12 +1,34 @@
-import React from 'react'
+import React from "react"
 
-const Legend = ({legendItems}) => {
-  console.log(legendItems)
-  
+const Legend = ({ legendItems }) => {
+
   return (
-    <div>
-      Legend
-    </div>
+    <div
+    style={{
+      display: "flex",
+      alignItems: "stretch",
+    }}
+  >
+    {legendItems.map((item) => (
+      <div
+        key={item.title}
+        style={{
+          backgroundColor: item.color,
+          flex: 1,
+          display: "flex",
+          alignItems: "center", // vertical
+          justifyContent: "center", // horiztontal
+          color: item.textColor != null ? item.textColor : "black",
+          fontWeight: "bolder",
+          fontSize: "1em",
+          height: "20vh",
+          width: '15vh'
+        }}
+      >
+        <span>{item.title}</span>
+      </div>
+    ))}
+  </div>
   )
 }
 

@@ -4,6 +4,7 @@ import { MapContainer, GeoJSON, /* Popup, Marker, TileLayer, */ } from "react-le
 import './Covid.css'
 
 const CovidMap = ({ countries }) => {
+  //console.log(countries)
 
   const mapStyle = {
     fillColor: 'white',
@@ -13,7 +14,7 @@ const CovidMap = ({ countries }) => {
   }
 
   const onEachCountry = (country, layer) => {
-    //layer.options.fillColor = country.properties.color
+    layer.options.fillColor = country.properties.color
     const name = country.properties.ADMIN
     /* AFTER ADDITION TO FEATURES */
     const confirmedText = country.properties.confirmedText

@@ -15,6 +15,7 @@ const Covid = () => {
   }
 
   useEffect(load, [])
+ //console.log(countries)
 
   return (
     <div> 
