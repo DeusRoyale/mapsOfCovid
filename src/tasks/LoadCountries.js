@@ -45,7 +45,6 @@ class LoadCoutriesTask {
       //console.log(z)      
     }
     
-    
     )
     this.setState(features)
   }
