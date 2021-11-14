@@ -53,7 +53,8 @@ class LoadCoutriesTask {
     const legendItem = legendItems.find((item) =>
       item.isFor(country.properties.confirmed)
     );
-
+    
+    //DATA added again!!
     if (legendItem != null) country.properties.color = legendItem.color;
   };
 }
